@@ -67,13 +67,13 @@ class FileStorage:
 
     def get(self, cls, id):
         """function to get"""
-        if c and id:
-            takeObj = '{}.{}'.format(c, id)
-            everyObj = self.all(c)
+        if cls and id:
+            takeObj = '{}.{}'.format(cls, id)
+            everyObj = self.all(cls)
             return everyObj.get(takeObj)
         else:
             return None
 
-    def count(self, c=None):
+    def count(self, cls=None):
         """function that is count"""
-        return (len(self.all(c)))
+        return (len(self.all(cls)))
